@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp"
+    android:layout_marginTop="0dp"
+    android:background="#F5F1E8">
+
+    <!-- Intro Text -->
+    <TextView
+        android:id="@+id/tvIntro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Upgrade from guest by creating an account today or login with your existing account to access all the features!"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginBottom="32dp" />
+
+    <!-- Create Account Button -->
+    <Button
+        android:id="@+id/btnCreateAccount"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="Create an Account"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:layout_marginBottom="10dp" />
+
+    <!-- OR Text -->
+    <TextView
+        android:id="@+id/tvOr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OR"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginBottom="10dp" />
+
+    <!-- Login Button -->
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:text="Login" />
+
+</LinearLayout>

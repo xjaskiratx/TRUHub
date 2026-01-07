@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="8dp"
+    android:paddingTop="4dp"
+    android:background="#FAF9F3">
+    <!-- ======================
+         Level 1 Category Chips (Horizontal scrollable row)
+         ====================== -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/levelOneGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:singleSelection="true"
+            app:selectionRequired="true"
+            app:chipSpacingHorizontal="8dp"
+            app:chipSpacingVertical="4dp"
+            android:paddingVertical="4dp"
+            android:layout_marginBottom="4dp" />
+    </HorizontalScrollView>
+
+    <!-- ======================
+         Level 2 Sub-Category Chips (still wraps, limited count)
+         ====================== -->
+    <HorizontalScrollView
+        android:id="@+id/levelTwoScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:visibility="gone">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/levelTwoGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:singleSelection="true"
+            app:chipSpacingHorizontal="8dp"
+            android:paddingVertical="4dp"
+            android:layout_marginBottom="8dp" />
+    </HorizontalScrollView>
+
+    <!-- ======================
+         Vertical RecyclerView for Cards
+         ====================== -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/placesRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="8dp"
+        android:overScrollMode="never"
+        android:fadingEdge="none" />
+
+</LinearLayout>

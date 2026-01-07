@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">trucompanion</string>
+    <string name="view_on_map">View on map</string>
+    <string name="map_activity_title">Map View</string>
+    <string name="back_button">Back</string>
+    <string name="search">Search…</string>
+    <string name="checklist">Checklist</string>
+    <string name="delete_club">Delete Club</string>
+    <string name="building_details">Building Details</string>
+    <string name="club_details">Club Details</string>
+</resources>

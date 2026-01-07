@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAF9F3">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@android:color/holo_blue_dark" />
+
+    <!-- Top Toolbar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/holo_blue_dark"
+        app:titleCentered="true"
+        app:titleTextColor="@android:color/white"
+        app:navigationIcon="@drawable/ic_back_arrow" />
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp">
+
+            <!-- Heading -->
+            <TextView
+                android:id="@+id/applyRoleHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submit Your Role Application"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="28dp"
+                android:layout_gravity="center" />
+
+            <!-- Choose Club -->
+            <Spinner
+                android:id="@+id/clubSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Choose Role -->
+            <Spinner
+                android:id="@+id/roleSpinner"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Custom Role -->
+            <EditText
+                android:id="@+id/customRoleInput"
+                android:hint="Enter custom role"
+                android:visibility="gone"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Role Description (Outlined Box) -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Describe your role and responsibilities"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/roleDescriptionInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minLines="1"
+                    android:gravity="top" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Submit Button -->
+            <Button
+                android:id="@+id/applyRoleBtn"
+                android:text="Submit Role Request"
+                android:layout_marginTop="14dp"
+                android:backgroundTint="@android:color/holo_blue_dark"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

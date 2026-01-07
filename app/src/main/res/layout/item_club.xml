@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="@drawable/rounded_card_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="14dp"
+    android:layout_marginLeft="0dp"
+    android:layout_marginRight="0dp"
+    android:backgroundTint="@android:color/system_surface_dim_light">
+
+
+    <!-- Top row: Club name + delete icon -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/itemClubName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Club Name"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingBottom="4dp" />
+
+        <ImageView
+            android:id="@+id/itemClubDelete"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="4dp"
+            android:src="@drawable/ic_delete_red"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/itemClubCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Category"
+        android:textSize="16sp"
+        android:paddingBottom="4dp" />
+
+    <TextView
+        android:id="@+id/itemClubDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Club Description"
+        android:textSize="16sp"
+        android:paddingBottom="4dp" />
+
+    <TextView
+        android:id="@+id/itemClubMembers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Members: 0"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:paddingBottom="8dp" />
+
+</LinearLayout>

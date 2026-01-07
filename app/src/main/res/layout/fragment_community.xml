@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Chip Row -->
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/communityChipGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <!-- Events Chip -->
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipEvents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Events"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:checked="true"
+            android:textColor="@color/white"
+            app:chipBackgroundColor="@color/chip_background_selector"
+            app:chipCornerRadius="20dp"
+            app:checkedIconVisible="false" />
+
+        <!-- Clubs Chip -->
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipClubs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clubs"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:textColor="@color/white"
+            app:chipBackgroundColor="@color/chip_background_selector"
+            app:chipCornerRadius="20dp"
+            app:checkedIconVisible="false" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <!-- Fragment Container -->
+    <FrameLayout
+        android:id="@+id/communityContentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

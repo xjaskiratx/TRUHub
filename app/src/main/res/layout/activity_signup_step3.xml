@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAF9F3">
+
+    <!-- Top Blue Strip -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@android:color/holo_blue_dark" />
+
+    <!-- TOP TOOLBAR -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/holo_blue_dark"
+        app:navigationIcon="@drawable/ic_back_arrow" />
+
+    <!-- YOUR ORIGINAL LAYOUT (unchanged) -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FAF9F3">
+
+            <!-- Heading -->
+            <TextView
+                android:id="@+id/signup3Heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Choose a Profile Color"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp"
+                android:textColor="#000000" />
+
+            <!-- Explanation -->
+            <TextView
+                android:id="@+id/signup3Subtext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Since you skipped the picture, choose a color instead."
+                android:textSize="15sp"
+                android:gravity="center"
+                android:paddingBottom="32dp"
+                android:textColor="#555555" />
+
+            <!-- Preview Circle -->
+            <ImageView
+                android:id="@+id/signup3PreviewCircle"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:background="@drawable/profile_circle_bg"
+                android:scaleType="centerCrop"
+                android:padding="0dp" />
+
+            <!-- Color Palette -->
+            <LinearLayout
+                android:id="@+id/signup3ColorPaletteRow"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="28dp" />
+
+            <!-- Buttons Row -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Go Back Button -->
+                <Button
+                    android:id="@+id/signup3BackBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="Go Back"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#BDBDBD"
+                    android:textColor="#000000"
+                    android:layout_marginEnd="12dp" />
+
+                <!-- Done Button -->
+                <Button
+                    android:id="@+id/signup3DoneBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="Done"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@android:color/holo_blue_dark"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginStart="12dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="TRUHub"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Trucompanion">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyD0RbGlZSF0-S_ECMLPajzeLmPPsWjWkJ0" />
+
+        <!-- ================== MAIN ACTIVITY ================== -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Explore TRU detail screen -->
+        <activity
+            android:name=".BuildingDetailActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Trucompanion" />
+
+        <activity
+            android:name=".ui.map.MapViewActivity"
+            android:exported="false"
+            android:label="@string/map_activity_title" />
+
+        <activity android:name=".ui.community.CreateEventActivity" />
+        <activity android:name=".ui.community.CreateClubActivity" />
+        <activity android:name=".ui.community.ApplyForRoleActivity" />
+
+        <!-- Auth screens -->
+        <activity android:name=".ui.auth.LoginActivity" />
+        <activity android:name=".ui.auth.SignupActivity" />
+        <activity android:name=".ui.auth.SignupStep2Activity" /> <!-- NEW -->
+        <activity android:name=".ui.auth.SignupStep3Activity" /> <!-- NEW -->
+        <activity android:name=".ui.profile.EditProfileActivity" />
+        <activity android:name=".ui.checklist.ItemDetailActivity" />
+        <activity android:name=".ui.community.ClubDetailsActivity"/>
+
+        <!-- ================== FOR FORGOT PASSWORD FLOW ================== -->
+        <activity
+            android:name=".ui.auth.ForgotPasswordActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.auth.OtpVerificationActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.auth.ResetPasswordActivity"
+            android:exported="false" />
+
+        <!-- ================== FILE PROVIDER (REQUIRED FOR CAMERA & GALLERY) ================== -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- ========================================================================== -->
+
+    </application>
+
+</manifest>

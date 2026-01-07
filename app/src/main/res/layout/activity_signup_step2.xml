@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAF9F3">
+
+    <!-- Top Blue Strip -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@android:color/holo_blue_dark" />
+
+    <!-- TOP TOOLBAR -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/holo_blue_dark"
+        app:navigationIcon="@drawable/ic_back_arrow" />
+
+    <!-- CONTENT -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- Heading -->
+            <TextView
+                android:id="@+id/profileSetupHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Set Your Profile Picture"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:id="@+id/profileSetupSubtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="You can change this anytime"
+                android:textSize="14sp"
+                android:textColor="#777777"
+                android:layout_marginBottom="28dp" />
+
+            <!-- Profile Preview Circle -->
+            <ImageView
+                android:id="@+id/profilePreviewCircle"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginBottom="32dp"
+                android:scaleType="centerCrop"
+                android:background="@drawable/profile_circle_bg"
+                android:padding="2dp" />
+
+            <!-- Photo Options Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="40dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnTakePhoto"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="Take Photo"
+                    android:drawableLeft="@android:drawable/ic_menu_camera"
+                    android:drawablePadding="8dp"
+                    app:backgroundTint="@android:color/holo_blue_dark"
+                    android:textColor="@android:color/white" />
+
+                <Space
+                    android:layout_width="16dp"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnChooseGallery"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="Choose"
+                    android:drawableLeft="@android:drawable/ic_menu_gallery"
+                    android:drawablePadding="8dp"
+                    app:backgroundTint="@android:color/holo_blue_dark"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+            <!-- Bottom Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSkip"
+                    android:layout_width="180dp"
+                    android:layout_height="48dp"
+                    android:text="Skip"
+                    app:backgroundTint="#DDDDDD"
+                    android:textColor="#000000" />
+
+                <Space
+                    android:layout_width="16dp"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSetPicture"
+                    android:layout_width="180dp"
+                    android:layout_height="48dp"
+                    android:text="Done!"
+                    app:backgroundTint="@android:color/holo_blue_dark"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

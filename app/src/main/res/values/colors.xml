@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <color name="primary">#1E88E5</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="background">#F9FAFB</color> <!-- light neutral tone -->
+    <color name="floating">#660000</color>
+    <color name="holo_blue_dark_70">#CC0A3D91</color>
+
+
+</resources>

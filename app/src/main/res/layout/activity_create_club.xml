@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAF9F3">
+
+    <!-- TOP COLOR STRIP -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@android:color/holo_blue_dark" />
+
+    <!-- TOP TOOLBAR -->
+<!--    <com.google.android.material.appbar.MaterialToolbar-->
+<!--        android:id="@+id/topAppBar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="?attr/actionBarSize"-->
+<!--        android:background="@android:color/holo_blue_dark"-->
+<!--        app:title="Create a Club"-->
+<!--        app:titleCentered="true"-->
+<!--        app:titleTextColor="@android:color/white"-->
+<!--        app:navigationIcon="@drawable/ic_back_arrow" />-->
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/holo_blue_dark"
+        app:titleCentered="true"
+        app:titleTextColor="@android:color/white"
+        app:titleTextAppearance="@style/TextAppearance.Material3.TitleMedium.Emphasized"
+        app:navigationIcon="@drawable/ic_back_arrow" />
+
+
+    <!-- SCROLL CONTENT -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Heading -->
+            <TextView
+                android:id="@+id/createClubHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Create a Club!"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="28dp" />
+
+            <!-- CLUB NAME (Outlined Box) -->
+
+            <!-- CLUB CATEGORY (Spinner stays outside, wrapped by label + padding) -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Category"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="0dp" />
+
+            <Spinner
+                android:id="@+id/clubCategorySpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_marginBottom="14dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Club Name"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/clubNameInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="14dp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- CLUB DESCRIPTION (Outlined Box) -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Club Description"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/clubDescriptionInput"
+                    android:minLines="1"
+                    android:gravity="top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- BUTTON -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/createClubBtn"
+                android:text="Create Club"
+                android:backgroundTint="@android:color/holo_blue_dark"
+                android:layout_marginTop="24dp"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
